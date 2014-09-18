@@ -4,7 +4,7 @@
 						[compojure.handler :refer [site]]
 						[org.httpkit.server :refer :all]
 						[ring.middleware.json :refer [wrap-json-params]]
-						[clojure.core.async :as async :refer :all])
+						[clojure.core.async :as async :refer [chan go]])
   (:gen-class))
 
 (def probes (chan))
