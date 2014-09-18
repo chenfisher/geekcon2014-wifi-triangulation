@@ -6,6 +6,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/core.async "0.1.338.0-5c5012-alpha"]
                  [http-kit "2.1.16"]
+                 [ring/ring-json "0.3.1"]
                  [compojure "1.1.9"]]
   :main ^:skip-aot triangulate.core
   :target-path "target/%s"
