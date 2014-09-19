@@ -50,7 +50,7 @@
 				ps (map (juxt :x :y) points)
 				xs (reduce + (map first ps))
 				ys (reduce + (map second ps))]
-		[(/ xs c) (/ ys c)]))
+		(mapv #(Math/round %) [(/ xs c) (/ ys c)])))
 
 
 (defn triangulate 
@@ -58,3 +58,6 @@
 	(-> (map #(apply intersections %) (comb/combinations (partition 2 (interleave stations radiuses)) 2))
 			flatten
 			average-point))
+
+
+
