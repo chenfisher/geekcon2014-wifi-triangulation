@@ -36,7 +36,7 @@
 
 (defn -main [& args]
   (let [port (Integer. (or (System/getenv "PORT") "8080"))]
-  	(run-server (-> (site #'all-routes) (wrap-cors :access-control-allow-origin "*" :access-control-allow-methods [:get :put :post :delete]) wrap-json-params wrap-json-response) {:port port})
+  	(run-server (-> (site #'all-routes) (wrap-cors :access-control-allow-origin #".+" :access-control-allow-methods [:get :put :post :delete]) wrap-json-params wrap-json-response) {:port port})
   	(go (while true (probes/handle (<! probes-chan))))
   	(println "running...")))
 
