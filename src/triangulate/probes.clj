@@ -17,7 +17,7 @@
   (->> (apply assoc {} value) 
   		(merge {"0" "0" "1" "0" "2" "0"})
   		vals
-  		(map #(Integer. %))
+  		(map #(Float. %))
   		vec))
 
 (defn submit-to-map 
