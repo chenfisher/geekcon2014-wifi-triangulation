@@ -4,22 +4,18 @@
 						[compojure.handler :refer [site]]
 						[org.httpkit.server :refer :all]
 						[ring.middleware.json :refer [wrap-json-params]]
-						[clojure.core.async :as async :refer [chan go]])
+						[clojure.core.async :as async :refer [chan go <! >!]]
+            [triangulate.probes :as probes])
   (:gen-class))
 
-(def probes (chan))
-
-(defn triangulate 
-  "calculate triangulation"
-  [{params :params}]
-  (println params))
+(def probes-chan (chan))
 
 (defn hello [req] {:status 200 :headers {"Content-Type" "application/json; charset=utf-8"} :body "Hello there"})
 
 (defn probe 
   "gets a probe request and outputs it to a channel to be triangulated"
   [req]
-  (go (>! probes req))
+  (go (>! probes-chan req))
   {:status 200 :headers {"Content-Type" "application/json; charset=utf-8"} :body "got probe"})
 
 (defroutes all-routes
@@ -30,6 +26,6 @@
 
 (defn -main [& args]
 	(run-server (-> (site #'all-routes) wrap-json-params) {:port 8080})
-	(go (while true (triangulate (<! probes))))
+	(go (while true (probes/handle (<! probes-chan))))
 	(println "running..."))
 

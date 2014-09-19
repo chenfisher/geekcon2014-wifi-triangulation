@@ -8,8 +8,10 @@
                  [http-kit "2.1.16"]
                  [ring/ring-json "0.3.1"]
                  [compojure "1.1.9"]
-                 [org.clojure/math.combinatorics "0.0.8"]]
+                 [org.clojure/math.combinatorics "0.0.8"]
+                 [com.taoensso/carmine "2.7.0"]]
   :main ^:skip-aot triangulate.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
-             :dev {:dependencies [[javax.servlet/servlet-api "2.5"]]}})
+             :dev {:dependencies [[javax.servlet/servlet-api "2.5"]
+                                  [org.clojure/tools.namespace "0.2.6"]]}})
