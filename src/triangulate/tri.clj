@@ -54,7 +54,7 @@
 				ps (map (juxt :x :y) points)
 				xs (reduce + (map first ps))
 				ys (reduce + (map second ps))]
-		[(/ xs c) (/ ys c)]))
+		[(/ xs c 1000000) (/ ys c 1000000)]))
 
 
 (defn triangulate 
