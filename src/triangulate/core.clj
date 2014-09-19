@@ -34,7 +34,8 @@
   (route/not-found "<p>Page not found.</p>")) ;; all other, return 404
 
 (defn -main [& args]
-	(run-server (-> (site #'all-routes) wrap-json-params wrap-json-response) {:port 8080})
-	(go (while true (probes/handle (<! probes-chan))))
-	(println "running..."))
+  (let [port (Integer. (or (System/getenv "PORT") "8080"))]
+  	(run-server (-> (site #'all-routes) wrap-json-params wrap-json-response) {:port port})
+  	(go (while true (probes/handle (<! probes-chan))))
+  	(println "running...")))
 
