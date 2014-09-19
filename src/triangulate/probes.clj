@@ -20,10 +20,17 @@
   		(map #(Integer. %))
   		vec))
 
+(defn submit-to-map 
+  "submit point to redis"
+  [point mac]
+  (wcar* (car/hset "map" mac point)))
+
 (defn handle 
   "handles an incoming probe"
   [{probe :params}]
-  (-> probe 						; the current probe
-  		update-and-fetch	; update redis with current probe and fetch latest value
-  		radiuses
-  		triangulate))
+  (let [mac (:mac probe)]
+	  (-> probe 						; the current probe
+	  		update-and-fetch	; update redis with current probe and fetch latest value
+	  		radiuses
+	  		triangulate
+	  		(submit-to-map mac))))
