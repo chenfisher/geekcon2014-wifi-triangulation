@@ -28,9 +28,9 @@
 (defn handle 
   "handles an incoming probe"
   [{probe :params}]
-  (println "handling " probe)
+  (println "handling " {:mac (:mac probe) :station (- (Integer. (:station probe)) 1) :distance (:distance probe)})
   (let [mac (:mac probe)]
-	  (-> probe 						; the current probe
+	  (-> {:mac (:mac probe) :station (- (Integer. (:station probe)) 1) :distance (:distance probe)} 						; the current probe
 	  		update-and-fetch	; update redis with current probe and fetch latest value
 	  		radiuses
 	  		triangulate

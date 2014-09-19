@@ -7,9 +7,9 @@
 ; 2 32.488921, 34.889385
 ; 3 32.488160, 34.890368
 
-(def stations [(Point. 270 340)
-							 (Point. 570 440)
-							 (Point. 410 540)])
+(def stations [(Point. 32.488766, 34.890636)
+							 (Point. 32.488921, 34.889385)
+							 (Point. 32.488160, 34.890368)])
 
 (defrecord Triangular [a b c])
 
