@@ -10,7 +10,7 @@
             [taoensso.carmine :as car])
   (:gen-class))
 
-(def probes-chan (chan))
+(def probes-chan (chan 10000))
 
 (defn hello [req] {:status 200 :headers {"Content-Type" "application/json; charset=utf-8"} :body "Hello there"})
 
