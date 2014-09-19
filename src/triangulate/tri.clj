@@ -3,6 +3,10 @@
 
 (defrecord Point [x y])
 
+; 1 32.488766, 34.890636
+; 2 32.488921, 34.889385
+; 3 32.488160, 34.890368
+
 (def stations [(Point. 270 340)
 							 (Point. 570 440)
 							 (Point. 410 540)])
@@ -50,7 +54,7 @@
 				ps (map (juxt :x :y) points)
 				xs (reduce + (map first ps))
 				ys (reduce + (map second ps))]
-		(mapv #(Math/round %) [(/ xs c) (/ ys c)])))
+		[(/ xs c) (/ ys c)]))
 
 
 (defn triangulate 
