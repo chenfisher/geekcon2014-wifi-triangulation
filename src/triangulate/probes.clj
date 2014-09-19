@@ -28,6 +28,7 @@
 (defn handle 
   "handles an incoming probe"
   [{probe :params}]
+  (println "handling " probe)
   (let [mac (:mac probe)]
 	  (-> probe 						; the current probe
 	  		update-and-fetch	; update redis with current probe and fetch latest value
