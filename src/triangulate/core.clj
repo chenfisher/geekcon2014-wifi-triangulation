@@ -8,7 +8,8 @@
             [triangulate.probes :as probes]
             [triangulate.redis :refer (wcar*)]
             [taoensso.carmine :as car]
-            [ring.middleware.cors :refer [wrap-cors]])
+            [ring.middleware.cors :refer [wrap-cors]]
+            [clojure.java.io :as io])
   (:gen-class))
 
 (def probes-chan (chan 10000))
@@ -28,7 +29,7 @@
     :body (apply assoc {} (wcar* (car/hgetall "map")))})
 
 (defroutes all-routes
-  (GET "/" [] hello)
+  (GET "/" [] (slurp (io/file "public/googleterrain.html")))
   (POST "/probe" [] probe)
   (GET "/map" [] get-map)
   (route/files "/") ;; static file url, in `public` folder
