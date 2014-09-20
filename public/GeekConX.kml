@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>GeekConX.kml</name>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff000000</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder>
+		<name>GeekConX</name>
+		<open>1</open>
+		<Placemark>
+			<name>workRoom</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.88927274757905,32.48881391050506,0 34.88952951856189,32.48880310574909,0 34.8895203458679,32.48901646792619,0 34.88951866101079,32.48905566039512,0 34.88948205076629,32.48910667366326,0 34.8894758015396,32.48915477002099,0 34.88937118215686,32.48915929017841,0 34.88935896589232,32.48911489520017,0 34.88927029556144,32.48911921463139,0 34.88927274757905,32.48881391050506,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Gym</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.89040241316023,32.48891102567405,0 34.89039369674606,32.48868551504771,0 34.8908143468646,32.48868716094553,0 34.89084937617793,32.488909729275,0 34.89040241316023,32.48891102567405,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Reception</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.89037097167743,32.48824141644869,0 34.89023554825,32.48820345656954,0 34.89024379874869,32.48814618707716,0 34.89037405806452,32.48807096525204,0 34.89049950015341,32.48813771768437,0 34.89056651288042,32.48810133293044,0 34.89065579914256,32.48814902798794,0 34.8905856007849,32.48822091020963,0 34.8905097833954,32.48817752490012,0 34.89037097167743,32.48824141644869,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>diningRoom</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.89004483876484,32.48801247566272,0 34.89004419981686,32.4881426508469,0 34.88970736946841,32.48814024495657,0 34.88971986163581,32.48801366390392,0 34.89004483876484,32.48801247566272,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>building4</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.88996123969537,32.48884710816332,0 34.88988573214969,32.48876710282384,0 34.88998136813772,32.48868146602482,0 34.89006009634685,32.48876213768108,0 34.88996123969537,32.48884710816332,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>building3</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.89004026180324,32.48860324950005,0 34.88995220198657,32.48868822224311,0 34.88988335513749,32.48861879713873,0 34.88997928263273,32.48853676222743,0 34.89004026180324,32.48860324950005,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>building2</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.89004707274341,32.48845411389586,0 34.88995904910248,32.48854135702984,0 34.88987622888836,32.48847822035713,0 34.88996705088314,32.4883929130378,0 34.89004707274341,32.48845411389586,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>building1</name>
+			<styleUrl>#msn_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							34.89004295941476,32.4883117055011,0 34.88995058764307,32.48839332828899,0 34.88986696804712,32.48833808573738,0 34.8899668297602,32.48825648674234,0 34.89004295941476,32.4883117055011,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
