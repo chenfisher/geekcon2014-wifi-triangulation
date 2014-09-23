@@ -1,36 +1,3 @@
-# triangulate
+# GeekCon 2014 [http://www.geekcon.org/] wifi triangulation project
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
-
-## Usage
-
-FIXME: explanation
-
-    $ java -jar triangulate-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+A simple clojure web service that takes (as http post requests) information from 3 different wifi stations and calculates triangulation to find location of object
